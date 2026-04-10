@@ -1,0 +1,185 @@
+:root {
+    --primary-color: #007BE6;
+    --secondary-color: #299595;
+    --bg-light: #DEFFFF;
+    --white: #ffffff;
+    --gray-light: #e8e8e8;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --font-main: 'Poppins', sans-serif;
+}
+
+/* 2. Reset & Base Styles */
+body { 
+    background-color: var(--bg-light);
+    margin: 0;
+    padding: 20px;
+    font-family: var(--font-main);
+    color: #333;
+}
+
+h1, h2 {
+    font-family: var(--font-main);
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+}
+
+h1 { text-align: center; margin-bottom: 30px; }
+
+/* 3. Container & Layout */
+.box, .content {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin: 20px auto;
+    max-width: 1100px; /* Lebih responsif daripada fixed width 1200px */
+    width: 90%;
+}
+
+/* 4. Form Elements */
+label {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    margin-left: 10px; /* Disesuaikan agar lebih seimbang */
+}
+
+input {
+    display: block; /* Agar form lebih rapi ke bawah pada mobile */
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px auto; /* Centering input */
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--gray-light);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 123, 230, 0.2);
+}
+
+/* 5. Buttons */
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #1f7a7a;
+    transform: translateY(-2px);
+}
+
+.back {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.3s;
+    text-decoration: none;
+}
+
+.back:hover {
+    background-color: #1f7a7a;
+    transform: translateY(-2px);
+}
+
+
+.btn-on {
+    display: flex;
+    justify-content: flex-end; /* Memperbaiki sintaks justify-content */
+    gap: 10px;
+}
+
+/* 6. Table Styling */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden; /* Agar border-radius terlihat */
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    table-layout: fixed;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f7ff; /* Highlight saat baris disorot */
+}
+
+.btn-edit {
+    background-color: #dfb560;
+    height: 30px;
+    width: 96px;
+}
+
+.btn-edit:hover {
+    background-color: #948026;
+}
+
+.btn-edit a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-hapus {
+    background-color: #d34d58;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.btn-hapus:hover {
+    background-color: #8c2e36;
+}
+
+.btn-hapus a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    display: inline-block;
+    vertical-align: middle;
+}

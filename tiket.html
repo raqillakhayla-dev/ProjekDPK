@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Pendaftaran</title>
+</head>
+<body>
+    <a href="index.html" class="back">BERANDA</a>
+
+    <h2>Daftar Pasien Klinik Sawan</h2>
+
+    <div class="form-group">
+        <input type="text" id="nama" placeholder="Masukkan Nama...">
+    </div>
+    <div>
+        <input type="text" id="hewan" placeholder="Masukkan Jenis Hewan...">
+    </div>
+    <div>
+        <input type="date" id="tanggal">
+    </div>
+    <div>
+        <input type="text" id="telp" placeholder="Harap Masukkan Nomor Telepon Aktif...">
+    </div>
+
+    <input type="hidden" id="edit-id">
+    
+    <button id="btn-daftar" onclick="simpanData(event)">DAFTAR PASIEN</button>
+    <button id="btn-simpan" onclick="simpanData(event)" style="display:none; background-color:#F39C12; color:white;">SIMPAN PERUBAHAN</button>
+    <button id="btn-batal" onclick="resetForm(event)" style="display:none;">BATAL</button>
+
+
+    <hr>
+
+    <h2 class="judulTabel">PASIEN TERDAFTAR</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Kode Pasien</th>
+                <th>Nama</th>
+                <th>Hewan</th>
+                <th>Tanggal</th>
+                <th>No. Telepon</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+    <tbody id="tabelPasien">
+
+    </tbody>
+    </table>
+<script src="JavaScript\script.js"></script>
+</body>
+</html>
